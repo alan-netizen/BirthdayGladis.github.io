@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Liliee</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .card-container {
+            position: relative;
+            width: 400px;
+            height: 350px;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            backface-visibility: hidden;
+            transform-origin: center;
+        }
+
+        .front {
+            z-index: 2;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+
+        .open {
+            transform: rotateY(180deg);
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card front">
+            <h2>Happy Birthday Liliee:)</h2>
+            <p>pas aku bikin ini, aku keinget pas awal awal pdkt sama kamu sok anonymous gitu.</p>
+            <p>sekarang aku jatuhnya malu-maluin wkwk :D</p>
+            <p>fun fact aku tadinya mau buat yang lebih dari ini cuman sering error dan yang jadi cmn ini yang simple aja</p>
+            <p>aku start dari jam 12 karna kamu ceklis jadi aku inisiatif buat kaya gini gatau kamu block aku atau engga</p>
+            <p>aku begadang semaleman pen buat yg lucu lucu gitu tapi error terus karena scriptnya ilg dan wktu keburu pagi maap yak</p>
+            <p>nanti aku belajar lagi ya buat bikin yang lebih dari ini</p>
+            <p>jangan lupa ditekan ya kartunya</p>
+
+        </div>
+        <div class="card back">
+            <h2>Happy Birthday Again</h2>
+            <p>All the beautiful moments we created will always be in my memory.</p>
+            <p>No other happiness can replace it.</p>
+            <p>I hope you have a happy day. Happy birthday.</p>
+            <p>i love u ms lilie.<3</p>
+            <p>it's kinda sad but trully</p>
+            <p>im sorry just being the part story of ur life</p>
+            <p>[Mr.Syachran]</p>
+        </div>
+    </div>
+
+    <script>
+        const cardContainer = document.querySelector('.card-container');
+
+        cardContainer.addEventListener('click', function() {
+            cardContainer.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
